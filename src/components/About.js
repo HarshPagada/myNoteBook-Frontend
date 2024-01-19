@@ -21,9 +21,9 @@ export default function About() {
           <label for="exampleInputPassword1" className="form-label">message</label>
           <textarea type="text" className="form-control" id="exampleInputPassword1" />
         </div>
-        <div class="col-md-6 mb-3">
-          <label for="inputCity" class="form-label">City</label>
-          <input type="text" class="form-control" id="inputCity"/>
+        <div className="col-md-6 mb-3">
+          <label for="inputCity" className="form-label">City</label>
+          <input type="text" className="form-control" id="inputCity"/>
         </div>
         
         <button type="submit" className="btn btn-primary">Submit</button>
