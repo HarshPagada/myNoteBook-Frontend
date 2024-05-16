@@ -8,7 +8,7 @@ function Signup(props) {
   });
 
 
-  let history = useNavigate()
+  let navigate = useNavigate()
   const handlesubmit = async (e) => {
     try {
       e.preventDefault();
@@ -27,7 +27,7 @@ function Signup(props) {
       if (json.success) {
         localStorage.setItem('token', json.authtoken)
         props.setLoggedInUser(email);
-        history('/')
+        navigate('/home')
         props.ShowAlert('Sign in successfully', 'success')
       } else {
         props.ShowAlert('invalid Credential', 'danger')

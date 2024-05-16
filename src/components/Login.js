@@ -23,7 +23,7 @@ function Login(props) {
         if (json.success) {
             localStorage.setItem('token', json.authtoken)
             props.setLoggedInUser(credentials.email);
-            history('/')
+            history('/home')
             props.ShowAlert('Logged in Successfully', "success")
 
         } else {
