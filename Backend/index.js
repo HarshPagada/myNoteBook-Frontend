@@ -6,7 +6,7 @@ const app = express()
 connectMongo();
 app.use(cors())
 
-const port = 5000
+const port = 'https://mynotebook-backend-1-gegr.onrender.com'
 
 app.use(express.json()) // Middleware
 
