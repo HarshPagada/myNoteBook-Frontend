@@ -1,5 +1,5 @@
 /* eslint-disable no-restricted-globals */
-import React, { useEffect, useLocation } from 'react'
+// import React, { useEffect, useLocation } from 'react'
 import { Link } from 'react-router-dom'
 import { useNavigate } from 'react-router-dom'
 
@@ -16,7 +16,9 @@ export default function Navbar({ loggedInUser }) {
     let navigate = useNavigate()
 
     const color = {
-        backgroundColor: "gainsboro"
+        backgroundColor: "gainsboro",
+        position:"sticky",
+        top: "0"
     }
 
     const color2 = {

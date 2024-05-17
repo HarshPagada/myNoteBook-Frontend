@@ -3,7 +3,6 @@ import noteContext from '../context/notes/NoteContext'
 import Noteitem from './Noteitem';
 import AddNote from './AddNote';
 import { useNavigate } from 'react-router-dom';
-import Login from './Login';
 
 function Notes(props) {
     const context = useContext(noteContext);
