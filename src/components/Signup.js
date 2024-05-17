@@ -13,7 +13,8 @@ function Signup(props) {
     try {
       e.preventDefault();
       const { name, email, password } = credentials;
-      const response = await fetch("http://localhost:5000/api/auth/createuser", {
+      const response = await fetch("https://mynotebook-backend-z56j.onrender.com/api/auth/createuser", {
+        // https://mynotebook-backend-2.onrender.com
         method: "POST",
         headers: {
           "Content-Type": "application/json",

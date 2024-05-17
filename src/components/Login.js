@@ -11,13 +11,14 @@ function Login(props) {
 
     const handlesubmit = async (e) => {
         e.preventDefault();
-        const response = await fetch(`http://localhost:5000/api/auth/credential`, {
+        const response = await fetch(`https://mynotebook-backend-z56j.onrender.com/api/auth/credential`, {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
             },
             body: JSON.stringify({ email: credentials.email, password: credentials.password }),
         });
+
         const json = await response.json();
 
         if (json.success) {
@@ -25,7 +26,6 @@ function Login(props) {
             props.setLoggedInUser(credentials.email);
             history('/home')
             props.ShowAlert('Logged in Successfully', "success")
-
         } else {
             props.ShowAlert("Enter valid Detail", "danger")
         }

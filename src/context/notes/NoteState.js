@@ -19,7 +19,7 @@ const NoteState = (props) => {
   //   }, 2000);
   // }
 
-  const host = "http://localhost:5000"
+  const host = "https://mynotebook-backend-z56j.onrender.com"
   const notesInitial = []
 
   const [notes, setNotes] = useState(notesInitial);
