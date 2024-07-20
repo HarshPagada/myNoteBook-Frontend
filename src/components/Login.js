@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
-import { useNavigate } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
+import Forgotpass from './Forgotpass';
 
 function Login(props) {
 
@@ -40,14 +41,14 @@ function Login(props) {
             <form onClick={handlesubmit}>
                 <section className="fire">
                     <div className="h-50">
-                        <div className="row justify-content-sm-center h-100 w-100">
+                        <div className="row justify-content-sm-center h-100">
                             <div className="col-xxl-4 col-xl-5 col-lg-5 col-md-7 col-sm-9">
                                 <div className="card shadow-lg">
                                     <div className="card-body p-5">
                                         <h1 className="fs-2 card-title text-center fw-bold mb-4">Login</h1>
                                         <div className="mb-3">
                                             <label className="mb-2 text-muted" htmlFor="email">E-Mail Address</label>
-                                            <input id="email" onChange={onChange} type="email" className="form-control" name="email" value={credentials.email} required  />
+                                            <input id="email" onChange={onChange} type="email" className="form-control" name="email" value={credentials.email} autoComplete="off" required  />
                                         </div>
 
                                         <div className="mb-3">
@@ -62,6 +63,7 @@ function Login(props) {
                                                 Login
                                             </button>
                                         </div>
+                                            <Link className="d-flex justify-content-end" aria-current="page" to="/Forgotpass">Forgot Password?</Link>
                                     </div>
                                 </div>
                             </div>

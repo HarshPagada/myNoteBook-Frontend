@@ -46,16 +46,16 @@ function Signup(props) {
   }
 
   return (
-    <div className="w-100 d-flex align-items-center flex-column">
+    <div className=" d-flex align-items-center flex-column">
       <h1>Create an Account</h1>
       <form onSubmit={handlesubmit} className="w-50">
         <div className="mb-3">
           <label htmlFor="name" className="form-label">Name</label>
-          <input type="name" className="form-control" id="name" name="name" onChange={onChange} aria-describedby="emailHelp" />
+          <input type="name" className="form-control" id="name" name="name" onChange={onChange} aria-describedby="emailHelp" autoComplete="off" />
         </div>
         <div className="mb-3">
           <label htmlFor="email" className="form-label">Email address</label>
-          <input type="email" className="form-control" id="email" name="email" onChange={onChange} aria-describedby="emailHelp" required />
+          <input type="email" className="form-control" id="email" name="email" onChange={onChange} aria-describedby="emailHelp" autoComplete="off" required />
           <div id="emailHelp" className="form-text">We'll never share your email with anyone else.</div>
         </div>
         <div className="mb-3">
@@ -69,7 +69,7 @@ function Signup(props) {
 
         <button type="submit" className="btn btn-primary">Submit</button>
       </form>
-      <p className="text-center">Copyright &copy; 2023-2024 &mdash; MyNoteBook - Already have an account <Link to='/login'>Login</Link></p>
+      <p className="text-center my-3">Copyright &copy; 2023-2024 &mdash; MyNoteBook - Already have an account <Link to='/login'>Login</Link></p>
     </div>
   )
 }
